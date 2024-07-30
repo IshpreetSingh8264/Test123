@@ -1,11 +1,7 @@
 // Three.js
-// EXPLORE THE FEATURES OF WEB ACCESSIBILITY
-// e.preventDefault()
 // how to change the default behaviour with the usage of ARIA tag
-// Explore the document object
-// Classlist
-// for: of, in, each
-// Create a repository in github and write some lines about github
+// Web scraping is a technique to extract the content of any website and store it
+
 
 // First way
 
@@ -270,3 +266,22 @@
 // After that we will add it to our staging area using git add .
 // after adding it to your staging area we will commit it to our branch for example main branch using git commit -m "Initial commit"
 //After commiting it to our main branch we can push it to our
+
+
+// String manipulation
+// In built functions to manipulate string
+// Make a program to implement string functions
+
+// Any type of text which can store our information is called a string and it is a type of variable
+// let txt = "ABCD";
+
+// console.log(txt.charCodeAt());
+
+// charCodeAt() method returns the unicode of the character at the specified index in a string
+// The method returns a number which represents the unicode of the character at the specified index
+
+//  length, replace, touppercase, tolowercase , concat, lastindex of, index of, charat, char code at, search, slice, substring, substr
+// settimeout setinterval
+// bubbling in javascript 
+// HTML injection, JS injection.
+
