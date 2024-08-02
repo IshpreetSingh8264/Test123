@@ -1,6 +1,13 @@
 // Three.js
 // how to change the default behaviour with the usage of ARIA tag
 // Web scraping is a technique to extract the content of any website and store it
+// Bubbling effect and stop propagation
+// Session cookies and databases
+
+
+// Error handling
+// Promises
+
 
 
 // First way
@@ -281,7 +288,203 @@
 // The method returns a number which represents the unicode of the character at the specified index
 
 //  length, replace, touppercase, tolowercase , concat, lastindex of, index of, charat, char code at, search, slice, substring, substr
-// settimeout setinterval
+// settimeout setinterval, clear interval
 // bubbling in javascript 
 // HTML injection, JS injection.
+
+// What are arrow func
+// Arrow functions are a new way to write anonymous function expressions in JavaScript
+// Arrow functions have a shorter syntax compared to function expressions
+// Arrow functions do not have their own this. They are not well suited for defining object methods
+// Arrow functions are not hoisted
+// Arrow functions should not be used as object methods
+
+// what is hoisting
+// Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope before code execution
+// Hoisting is JavaScript's default behavior of moving declarations to the top
+
+
+
+// QUESTION NUMBER 2
+
+// let existingUser = localStorage.getItem('userName');
+
+// if (!existingUser) {
+
+//     label = document.createElement('label')
+//     label.innerHTML = "Please enter your name: "
+//     document.body.appendChild(label);
+//     br = document.createElement('br')
+//     document.body.appendChild(br);
+
+//     input = document.createElement('input')
+//     input.setAttribute('type', 'text')
+//     input.setAttribute('placeholder', 'Please enter your name');
+//     input.setAttribute('id', 'mainInput')
+//     document.body.appendChild(input)
+
+//     button = document.createElement('button');
+//     button.innerHTML = 'submit';
+//     button.setAttribute('id', 'submitButton')
+//     document.body.appendChild(button)
+
+//     button.addEventListener('click', function () {
+//         let name = document.getElementById('mainInput').value;
+//         console.log(name);
+//         localStorage.setItem('userName', name)
+//         document.body.innerHTML = '';
+//         let welcome = document.createElement('h1');
+//         welcome.innerHTML = "Welcome " + name;
+//         document.body.appendChild(welcome)
+//         resetBtn = document.createElement('button');
+//         resetBtn.innerHTML = "Reset";
+//         document.body.appendChild(resetBtn);
+//         resetBtn.addEventListener('click', function () {
+//             localStorage.removeItem('userName');
+//             location.reload();
+//         })
+//     });
+
+
+
+// }else{
+//     let name = "Your name is "+ existingUser;
+
+//     alert(name);
+//     let welcome = document.createElement('h1');
+//     welcome.innerHTML = "Welcome " + existingUser;
+//     document.body.appendChild(welcome)
+//     resetBtn = document.createElement('button');
+//     resetBtn.innerHTML = "Reset";
+//     document.body.appendChild(resetBtn);
+//     resetBtn.addEventListener('click',function(){
+//         localStorage.removeItem('userName');
+//         location.reload();
+//     })
+// }
+
+// let groups = {
+//     firstGroup:{
+//         groupName:"First Group",
+//         groupMembers:{
+//             John:{
+//                 name:"John",
+//                 questionsAnswered:2
+//             },
+//             PearlWalton: {
+//                 name: "Pearl Walton",
+//                 questionsAnswered: 1
+//             },
+//             LesterOrtiz: {
+//                 name: "LesterOrtiz",
+//                 questionsAnswered: 3
+//             },
+//             MikeParker: {
+//                 name: "MikeParker",
+//                 questionsAnswered: 4
+//             },
+//             OliviaSutton: {
+//                 name: "OliviaSutton",
+//                 questionsAnswered: 1
+//             }
+
+//         }
+//     },
+//     secondGroup:{
+//         groupName: "Second Group",
+//         groupMembers: {
+//             LillieSullivan: {
+//                 name: "Lillie Sullivan",
+//                 questionsAnswered: 2
+//             },
+//             EvaWelch: {
+//                 name: "Eva Welch",
+//                 questionsAnswered: 1
+//             },
+//             RuthHart: {
+//                 name: "Ruth Hart",
+//                 questionsAnswered: 3
+//             },
+//             TylerLittle: {
+//                 name: "Tyler Little",
+//                 questionsAnswered: 4
+//             },
+//             LouBurns: {
+//                 name: "Lou Burns",
+//                 questionsAnswered: 1
+//             }
+
+//         }
+
+
+//     }
+// }
+
+// let group1Members = groups.firstGroup.groupMembers
+
+// for (groupMember in group1Members){
+//     console.log(group1Members[groupMember]);
+
+// }
+
+
+// let possibleHexColourValues = {
+//     0: "0",
+//     1: "1",
+//     2: "2",
+//     3: "3",
+//     4: "4",
+//     5: "5",
+//     6: "6",
+//     7: "7",
+//     8: "8",
+//     9: "9",
+//     10: "A",
+//     11: "B",
+//     12: "C",
+//     13: "D",
+//     14: "E",
+//     15: "F"
+// }
+
+// function changeColour() {
+//     document.getElementById('btn').setAttribute('disabled','')
+//     setInterval(() => {
+
+//         let hexValue = "#";
+//         for (let i = 0; i < 6; i++) {
+//             hexValue += possibleHexColourValues[Math.floor(Math.random() * 16)]
+//         }
+//         console.log(hexValue);
+//         document.body.style.backgroundColor = hexValue
+
+//     }, 2000);
+
+// }
+
+
+// Callback functions are those functions which expect another function as arguements
+// array.forEach(element => {
+    
+// });
+
+// when executing javascript code, different types of errors can occur.
+// Errors can be coding errors made by the programmer errors due to wrong input and other unforeseeable things
+
+// Try catch block, throw and finally
+// function tryCatch(){
+//     try{
+//         throw "gfkjdhgidfgkfdlkj"
+//     }  
+//     catch(err){
+//         console.log("There was an error " + err);
+//     }
+//     finally{
+//         console.log("This is finally block and will always run");
+//     }
+// }
+// tryCatch()
+
+// The finally statement lets you execute a piece if cide regardless
+// It is written after try and catch
 
