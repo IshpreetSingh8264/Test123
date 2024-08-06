@@ -500,17 +500,8 @@
 
 // callback hell
 
-const arr = [
-    {
-        name: "John",
-        age: 25
-    },
-    {
-        name: "Mike",
-        age: 30
-    },
-    {
-        name: "Olivia",
-        age: 35
-    }
-];
+
+// async await makes the promises easier to write
+// async makes a function return a promise
+// await makes a function wait for a promise
+
