@@ -448,6 +448,7 @@
 // }
 
 // function changeColour() {
+//     try{
 //     document.getElementById('btn').setAttribute('disabled','')
 //     setInterval(() => {
 
@@ -459,13 +460,18 @@
 //         document.body.style.backgroundColor = hexValue
 
 //     }, 2000);
-
+//     }catch(err){
+//         console.log("An error occured while executing the code: " + err)
+//     }
+//     finally{
+//         console.log("The function has been called")
+//     }
 // }
 
 
 // Callback functions are those functions which expect another function as arguements
 // array.forEach(element => {
-    
+
 // });
 
 // when executing javascript code, different types of errors can occur.
@@ -488,3 +494,23 @@
 // The finally statement lets you execute a piece if cide regardless
 // It is written after try and catch
 
+// resolve, reject, promise
+// pending state, fulfilled state
+
+
+// callback hell
+
+const arr = [
+    {
+        name: "John",
+        age: 25
+    },
+    {
+        name: "Mike",
+        age: 30
+    },
+    {
+        name: "Olivia",
+        age: 35
+    }
+];
