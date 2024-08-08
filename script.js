@@ -1,3 +1,32 @@
+// MOBILE APP DEVELOPMENT
+// There are two types of mobile apps hybrid and native
+// Cordova (under phonecap -----> apache)
+//      SDK standard development kit
+//      JDK java development kid
+//      Android Studio
+//      Node JS
+// Cordova native api acts as a bridge between our webapp and the mobile app
+// Categorisation of API's
+// Web API
+// Browser API
+// Server API
+// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Three.js
 // how to change the default behaviour with the usage of ARIA tag
 // Web scraping is a technique to extract the content of any website and store it
@@ -505,3 +534,5 @@
 // async makes a function return a promise
 // await makes a function wait for a promise
 
+
+// Loops, for each loop, eventlistener, javascript styling, data attribute, select attribute using javascript with its value, random function

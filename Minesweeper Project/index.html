@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            background-color: aquamarine;
+        }
+
+        #mainContainer {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #gameBoard {
+            display: grid;
+            grid-template-columns: repeat(10, 50px);
+            grid-template-rows: repeat(10, 50px);
+            gap: 1px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cell {
+            width: 50px;
+            height: 50px;
+            background-color: lightgray;
+            border: 1px solid #000;
+            font-size: 18px;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+
+        .revealed {
+            background-color: #e6ea0c;
+            cursor: default;
+        }
+
+        .mine {
+            background-color: red;
+            cursor: default;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="mainContainer">
+
+        <h1>Minesweeper Initial Stage</h1>
+        <div id="gameBoard"></div>
+        <button id="restartBtn" onclick="resetBoard()">Restart</button>
+    </div>
+
+
+
+    
+    <script>
+        const cells = [];
+        const gameBoardSizing = 10;
+        let mines = 10;
+        const gameBoard = document.getElementById('gameBoard');
+
+        function boardInitializing() {
+            for (let col = 0; col < gameBoardSizing; col++) {
+                for (let row = 0; row < gameBoardSizing; row++) {
+                    const cell = document.createElement('div');
+                    cell.classList.add('cell');
+                    cell.setAttribute('data-row', row);
+                    cell.setAttribute('data-col', col);
+                    cell.setAttribute('data-mine', false);
+                    cell.setAttribute('data-revealed', false);
+                    cell.addEventListener('click', cellClicked);
+                    gameBoard.appendChild(cell);
+                    cells.push(cell);
+                }
+            }
+            setMines();
+        }
+
+        function setMines() {
+            for (let i = 0; i < mines; i++) {
+                let cell;
+                do {
+                    const randomIndex = Math.floor(Math.random() * cells.length);
+                    cell = cells[randomIndex];
+                    console.log(randomIndex)
+
+                } while (cell.getAttribute('data-mine') === 'true');
+                cell.setAttribute('data-mine', true);
+            }
+        }
+
+        function cellClicked() {
+            const isMine = this.getAttribute('data-mine') === 'true';
+            const isRevealed = this.getAttribute('data-revealed') === 'true';
+            if (isRevealed) {
+                return;
+            }
+            if (isMine) {
+                this.classList.add('mine');
+                alert('Game Over');
+                resetBoard();
+                return;
+            }
+            this.classList.add('revealed');
+            this.setAttribute('data-revealed', true);
+        }
+
+        function resetBoard() {
+            gameBoard.innerHTML = '';
+            cells.length = 0;
+            boardInitializing();
+        }
+
+        boardInitializing();
+    </script>
+</body>
+
+</html>
